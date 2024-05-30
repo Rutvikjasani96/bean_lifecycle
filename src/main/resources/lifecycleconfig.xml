@@ -10,4 +10,8 @@
         <property name="price" value="10"/>
     </bean>
 
+    <bean class="com.bean_lifecycle.Pepsi" name="pepsi">
+        <property name="price" value="20"/>
+    </bean>
+
 </beans>

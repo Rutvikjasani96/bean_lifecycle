@@ -17,5 +17,9 @@ public class App
 
         System.out.println(samosa);
         context.registerShutdownHook();
+
+        Pepsi pepsi = (Pepsi) context.getBean("pepsi");
+        System.out.println(pepsi);
+
     }
 }
