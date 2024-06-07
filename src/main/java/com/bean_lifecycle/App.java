@@ -21,5 +21,8 @@ public class App
         Pepsi pepsi = (Pepsi) context.getBean("pepsi");
         System.out.println(pepsi);
 
+        WithAnnotations withAnnotation = (WithAnnotations) context.getBean("withAnnotation");
+        System.out.println(withAnnotation.getName());
+
     }
 }

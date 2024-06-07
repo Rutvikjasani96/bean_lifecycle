@@ -2,8 +2,14 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd">
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/context
+       http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!--    To  Enable All the Annotations -->
+<!--    <context:annotation-config/>-->
 
     <!--    This is our bean-->
     <bean class="com.bean_lifecycle.Samosa" name="samosa" init-method="init" destroy-method="destroy">
@@ -13,5 +19,11 @@
     <bean class="com.bean_lifecycle.Pepsi" name="pepsi">
         <property name="price" value="20"/>
     </bean>
+
+    <bean class="com.bean_lifecycle.WithAnnotations" name="withAnnotation">
+        <property name="name" value="Rutvik Jasani"/>
+    </bean>
+<!--    To Enable only PostConstruct & PreDestroy Annotations -->
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
 
 </beans>
